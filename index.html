@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        html,body {
+            height:100%;
+            width:100%;
+            margin:0;
+        }
+        body {
+            background-color:powderblue;
+            display:flex;
+        }
+        form {
+            margin:auto;
+        }
+        #searchbar{
+            width: 600px;
+            height: 30px;
+        }
+        .buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .button {
+        padding: 10px 20px;
+        background-color: lightgray;
+        border: 1px solid gray;
+        border-radius: 4px;
+        text-decoration: none;
+        color: black;
+        margin-left: 10px;
+        }
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <title>Search</title>
     </head>
     <body>
-        <form action="https://www.google.com/search">
-            <input type="text" name="q">
+        <form align="center" action="https://www.google.com/search">
+            <button type="submit"id ="googleLogo"  style="border: none; background: none; width: 400px;">
+                <img  src="google.png" alt="Submit Button"width="100%">
+            </button>
+            <input class="input-group input-group-sm mb-3" id="searchbar" type="text" name="q">
             <input type="submit" value="Google Search">
+            <input type="submit" value="I'm Feeling Lucky">
         </form>
+        <div class="buttons">
+            <a href="#" class="button">GoogleAdvance</a>
+            <a href="#" class="button">GoogleImage</a>
+        </div>
     </body>
 </html>
